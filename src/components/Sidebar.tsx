@@ -82,7 +82,7 @@ export function Sidebar() {
                             </a>
                             <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
                             <BarChart4 width={20} height={20} className='mr-4'/>
-                                Métricas de dados
+                                Métricas de dados 
                             </a>
                             <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
                             <CalendarCheck2 width={20} height={20} className='mr-4'/>
