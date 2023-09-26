@@ -1,6 +1,6 @@
 import { Bell, Clock8, Gavel, HomeIcon, Users } from 'lucide-react'
 import { Sidebar } from "../../components/Sidebar";
-import ReactApexChart from 'react-apexcharts';
+import Chart from 'react-apexcharts';
 
 
 
@@ -73,7 +73,7 @@ export function Home() {
     //     },
     // ]);
 
-    const optionsChart = [
+    const optionsChart = 
         {
             chart: {
                 type: 'bar',
@@ -129,7 +129,7 @@ export function Home() {
                 },
             },
         }
-    ]
+    
 
     const series = [
         
@@ -296,7 +296,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart5" className="mt-2">
-                                <ReactApexChart options={optionsChart} series={series} type="bar" height={350} />
+                                <Chart  options={optionsChart} series={series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>
@@ -314,7 +314,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart6" className="mt-2">
-                                <ReactApexChart options={optionsChart} series={series} type="bar" height={350} />
+                                <Chart options={optionsChart} series={series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>
