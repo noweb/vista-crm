@@ -77,7 +77,7 @@ export function Home() {
         {
             chart: {
                 type: 'bar',
-                height: 350,
+                height: '350',
                 toolbar: {
                     show: false,
                 },
@@ -296,7 +296,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart5" className="mt-2">
-                                <Chart  options={optionsChart} series={series} type="bar" height={350} />
+                                {/* <Chart  options={optionsChart} series={series} type="bar" height={350} /> */}
                             </div>
                         </div>
                     </div>
@@ -310,11 +310,11 @@ export function Home() {
                                         <select className="block w-full py-1.5 pl-3 font-medium pr-10 border-gray-300 rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
                                             <option>Últimos 7 dias</option>
                                         </select>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                             <div id="chart6" className="mt-2">
-                                <Chart options={optionsChart} series={series} type="bar" height={350} />
+                                {/* <Chart options={optionsChart} series={series} type="bar" height={350} /> */}
                             </div>
                         </div>
                     </div>
