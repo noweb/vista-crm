@@ -35,7 +35,7 @@ export function Sidebar() {
                                 <Users width={20} height={20} className='mr-4' />
                                 Clientes
                             </a>
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/owners" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/owners' ? 'bg-indigo-600' : ''}`}>
                             <UserCog2 width={20} height={20} className='mr-4'/>
                                 Proprietarios
                             </a>

@@ -5,7 +5,8 @@ import { CreateClient } from "./src/pages/createClient";
 import { Clients } from "./src/pages/clients";
 import { Properties } from "./src/pages/properties";
 import { Settings } from "./src/pages/settings";
-
+import { Owners } from "./src/pages/owners";
+Owners
 export function Router(){
     return (
         
@@ -16,6 +17,7 @@ export function Router(){
           <Route path="/clients" element={<Clients/>} /> 
           <Route path="/properties" element={<Properties/>} /> 
           <Route path="/settings" element={<Settings/>} /> 
+          <Route path="/owners" element={<Owners/>} /> 
         </Routes>
 
     )
