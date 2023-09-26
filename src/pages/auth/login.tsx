@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+
+
 export function Login (){
     return (
         <section className="py-12 bg-white sm:py-16 lg:py-20 min-h-screen flex items-center">
@@ -37,9 +40,9 @@ export function Login (){
                                 </div>
 
                                 <div>
-                                    <a href="/dashboard" className="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500">
+                                    <Link to="/dashboard" className="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500">
                                         Entrar
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </form>
