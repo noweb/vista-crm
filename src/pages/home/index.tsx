@@ -1,7 +1,7 @@
 import { Bell, Clock8, Gavel, HomeIcon, Users } from 'lucide-react'
 import { Sidebar } from "../../components/Sidebar";
 
-
+import Chart from 'react-apexcharts';
 
 export function Home() {
 
@@ -72,76 +72,137 @@ export function Home() {
     //     },
     // ]);
 
-    // const optionsChart = 
-    //     {
-    //         chart: {
-    //             type: 'bar',
-    //             height: '350',
-    //             toolbar: {
-    //                 show: false,
-    //             },
-    //         },
-    //         series: [{
-    //             name: 'New user',
-    //             data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-    //         },
-    //         {
-    //             name: 'Returning user',
-    //             data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-    //         },
-    //         ],
-    //         plotOptions: {
-    //             bar: {
-    //                 horizontal: false,
-    //                 columnWidth: '32%',
-    //                 endingShape: 'rounded',
-    //                 borderRadius: 3,
-    //             },
-    //         },
-    //         dataLabels: {
-    //             enabled: false,
-    //         },
-    //         stroke: {
-    //             show: true,
-    //             width: 4,
-    //             colors: ['transparent'],
-    //         },
-    //         xaxis: {
-    //             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    //         },
-    //         yaxis: {
-    //             show: false,
-    //         },
-    //         fill: {
-    //             opacity: 1,
-    //         },
-    //         colors: ['#4F46E5', '#E4E4E7'],
-    //         legend: {
-    //             position: 'bottom',
-    //             markers: {
-    //                 radius: 12,
-    //                 offsetX: -4,
-    //             },
-    //             itemMargin: {
-    //                 horizontal: 12,
-    //                 vertical: 20,
-    //             },
-    //         },
-    //     }
-    
+    const optionsChart =
+    {
+        chart: {
+            id: "basic-bar",
+            height: 350,
+            toolbar: {
+                show: false,
+            },
+            foreColor: '#',
 
-    // const series = [
-        
-    //         {
-    //             name: 'New user',
-    //             data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-    //         },
-    //         {
-    //             name: 'Returning user',
-    //             data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-    //         },
-        
-    // ]
+            series: [{
+                name: 'New user',
+                data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
+            },
+            {
+                name: 'Returning user',
+                data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
+            },
+            ],
+
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '32%',
+                    endingShape: 'rounded',
+                    borderRadius: 3,
+                },
+            },
+
+            dataLabels: {
+                enabled: false,
+            },
+
+            stroke: {
+                show: true,
+                width: 4,
+                colors: ['transparent'],
+            },
+
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            },
+            yaxis: {
+                show: false,
+            },
+            fill: {
+                opacity: 1,
+            },
+            colors: ['#4F46E5', '#E4E4E7'],
+
+            legend: {
+                    position: 'bottom',
+                    markers: {
+                        radius: 12,
+                        offsetX: -4,
+                    },
+                    itemMargin: {
+                        horizontal: 12,
+                        vertical: 20,
+                    },
+                },
+        }
+
+        // chart: {
+        //     // type: 'bar',
+        //     height: '350',
+        //     toolbar: {
+        //         show: false,
+        //     },
+        // },
+        // series: [{
+        //     name: 'New user',
+        //     data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
+        // },
+        // {
+        //     name: 'Returning user',
+        //     data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
+        // },
+        // ],
+        // plotOptions: {
+        //     bar: {
+        //         horizontal: false,
+        //         columnWidth: '32%',
+        //         endingShape: 'rounded',
+        //         borderRadius: 3,
+        //     },
+        // },
+        // dataLabels: {
+        //     enabled: false,
+        // },
+        // stroke: {
+        //     show: true,
+        //     width: 4,
+        //     colors: ['transparent'],
+        // },
+        // xaxis: {
+        //     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        // },
+        // yaxis: {
+        //     show: false,
+        // },
+        // fill: {
+        //     opacity: 1,
+        // },
+        // colors: ['#4F46E5', '#E4E4E7'],
+        // legend: {
+        //     position: 'bottom',
+        //     markers: {
+        //         radius: 12,
+        //         offsetX: -4,
+        //     },
+        //     itemMargin: {
+        //         horizontal: 12,
+        //         vertical: 20,
+        //     },
+        // },
+    }
+
+
+    const series = [
+
+        {
+            name: 'New user',
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
+        },
+        {
+            name: 'Returning user',
+            data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
+        },
+
+    ]
 
 
 
@@ -295,7 +356,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart5" className="mt-2">
-                                {/* <Chart  options={optionsChart} series={series} type="bar" height={350} /> */}
+                                <Chart options={optionsChart} series={series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>
@@ -309,11 +370,11 @@ export function Home() {
                                         <select className="block w-full py-1.5 pl-3 font-medium pr-10 border-gray-300 rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
                                             <option>Últimos 7 dias</option>
                                         </select>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                             <div id="chart6" className="mt-2">
-                                {/* <Chart options={optionsChart} series={series} type="bar" height={350} /> */}
+                                <Chart options={optionsChart} series={series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>
