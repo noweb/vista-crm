@@ -6,7 +6,6 @@ import { Clients } from "./src/pages/clients";
 import { Properties } from "./src/pages/properties";
 import { Settings } from "./src/pages/settings";
 import { Owners } from "./src/pages/owners";
-Owners
 export function Router(){
     return (
         

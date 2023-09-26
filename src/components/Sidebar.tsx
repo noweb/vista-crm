@@ -11,7 +11,7 @@ export function Sidebar() {
                 <div className="flex flex-col justify-between flex-1 h-full px-4">
                     <div className="space-y-4">
                         <div>
-                            <Link to="create-client" type="button" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/create-client' ? 'bg-indigo-600' : ''}`}>
+                            <Link to="/create-client" type="button" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/create-client' ? 'bg-indigo-600' : ''}`}>
                                 <svg className="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                 </svg>
