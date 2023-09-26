@@ -1,6 +1,5 @@
 import { Bell, Clock8, Gavel, HomeIcon, Users } from 'lucide-react'
 import { Sidebar } from "../../components/Sidebar";
-import Chart from 'react-apexcharts';
 
 
 
