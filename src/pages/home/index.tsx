@@ -5,204 +5,61 @@ import Chart from 'react-apexcharts';
 
 export function Home() {
 
-    // const [optionsChart, setOptionsChart] = useState({
-    //     chart: {
-    //         type: 'bar',
-    //         height: 350,
-    //         toolbar: {
-    //             show: false,
-    //         },
-    //     },
-    //     series: [{
-    //         name: 'New user',
-    //         data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-    //     },
-    //     {
-    //         name: 'Returning user',
-    //         data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-    //     },
-    //     ],
-    //     plotOptions: {
-    //         bar: {
-    //             horizontal: false,
-    //             columnWidth: '32%',
-    //             endingShape: 'rounded',
-    //             borderRadius: 3,
-    //         },
-    //     },
-    //     dataLabels: {
-    //         enabled: false,
-    //     },
-    //     stroke: {
-    //         show: true,
-    //         width: 4,
-    //         colors: ['transparent'],
-    //     },
-    //     xaxis: {
-    //         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    //     },
-    //     yaxis: {
-    //         show: false,
-    //     },
-    //     fill: {
-    //         opacity: 1,
-    //     },
-    //     colors: ['#4F46E5', '#E4E4E7'],
-    //     legend: {
-    //         position: 'bottom',
-    //         markers: {
-    //             radius: 12,
-    //             offsetX: -4,
-    //         },
-    //         itemMargin: {
-    //             horizontal: 12,
-    //             vertical: 20,
-    //         },
-    //     },
-    // })
-
-    // const [series, setSeries] = useState([
-    //     {
-    //         name: 'New user',
-    //         data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-    //     },
-    //     {
-    //         name: 'Returning user',
-    //         data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-    //     },
-    // ]);
-
+    
     const optionsChart =
     {
-        chart: {
-            id: "basic-bar",
-            height: 350,
-            toolbar: {
-                show: false,
-            },
-            foreColor: '#',
-
-            series: [{
-                name: 'New user',
-                data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-            },
-            {
-                name: 'Returning user',
-                data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-            },
-            ],
-
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: '32%',
-                    endingShape: 'rounded',
-                    borderRadius: 3,
+        plotOptions: {
+            bar: {
+                borderRadius: 10,
+                dataLabels: {
+                    position: 'top', // top, center, bottom
                 },
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            formatter: function (val: string) {
+                return val + "%";
             },
-
-            dataLabels: {
-                enabled: false,
+            offsetY: -20,
+            style: {
+                fontSize: '12px',
+                colors: ["#304758"]
+            }
+        },
+        xaxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            position: 'top',
+            axisBorder: {
+              show: false
             },
-
-            stroke: {
-                show: true,
-                width: 4,
-                colors: ['transparent'],
+            axisTicks: {
+              show: false
             },
-
-            xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            crosshairs: {
+              fill: {
+                type: 'gradient',
+                gradient: {
+                  colorFrom: '#D8E3F0',
+                  colorTo: '#BED1E6',
+                  stops: [0, 100],
+                  opacityFrom: 0.4,
+                  opacityTo: 0.5,
+                }
+              }
             },
-            yaxis: {
-                show: false,
-            },
-            fill: {
-                opacity: 1,
-            },
-            colors: ['#4F46E5', '#E4E4E7'],
-
-            legend: {
-                    position: 'bottom',
-                    markers: {
-                        radius: 12,
-                        offsetX: -4,
-                    },
-                    itemMargin: {
-                        horizontal: 12,
-                        vertical: 20,
-                    },
-                },
-        }
-
-        // chart: {
-        //     // type: 'bar',
-        //     height: '350',
-        //     toolbar: {
-        //         show: false,
-        //     },
-        // },
-        // series: [{
-        //     name: 'New user',
-        //     data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-        // },
-        // {
-        //     name: 'Returning user',
-        //     data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-        // },
-        // ],
-        // plotOptions: {
-        //     bar: {
-        //         horizontal: false,
-        //         columnWidth: '32%',
-        //         endingShape: 'rounded',
-        //         borderRadius: 3,
-        //     },
-        // },
-        // dataLabels: {
-        //     enabled: false,
-        // },
-        // stroke: {
-        //     show: true,
-        //     width: 4,
-        //     colors: ['transparent'],
-        // },
-        // xaxis: {
-        //     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        // },
-        // yaxis: {
-        //     show: false,
-        // },
-        // fill: {
-        //     opacity: 1,
-        // },
-        // colors: ['#4F46E5', '#E4E4E7'],
-        // legend: {
-        //     position: 'bottom',
-        //     markers: {
-        //         radius: 12,
-        //         offsetX: -4,
-        //     },
-        //     itemMargin: {
-        //         horizontal: 12,
-        //         vertical: 20,
-        //     },
-        // },
+            tooltip: {
+              enabled: true,
+            }
+          },
+        series: [{
+            name: 'Vendas',
+            data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+        }],
+        colors: ['#534ae0']
     }
 
 
-    const series = [
-
-        {
-            name: 'New user',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57],
-        },
-        {
-            name: 'Returning user',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 76, 85, 101],
-        },
-
-    ]
 
 
 
@@ -217,7 +74,7 @@ export function Home() {
                     <p className="mt-1 text-base font-medium text-gray-500 md:mt-0 md:ml-2">utilize essa tela para analizar os dados</p>
                 </div>
 
-                <form action="" className="max-w-6xl mt-10">
+                <form action="" className="w-full mt-10">
                     <div className="grid grid-cols-1 sm:grid-cols-3 col-span-2 gap-x-4 gap-y-5">
                         <div className="w-full">
                             <div className="">
@@ -256,7 +113,7 @@ export function Home() {
                     </div>
                 </form>
 
-                <div className="flex items-center gap-3 mt-10">
+                <div className="flex items-center gap-3 mt-5">
                     <Bell width={20} height={20} />
                     <h2>Lembretes</h2>
                 </div>
@@ -356,7 +213,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart5" className="mt-2">
-                                <Chart options={optionsChart} series={series} type="bar" height={350} />
+                                <Chart options={optionsChart} series={optionsChart.series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>
@@ -374,7 +231,7 @@ export function Home() {
                                 </div>
                             </div>
                             <div id="chart6" className="mt-2">
-                                <Chart options={optionsChart} series={series} type="bar" height={350} />
+                                <Chart options={optionsChart} series={optionsChart.series} type="bar" height={350} />
                             </div>
                         </div>
                     </div>

@@ -46,7 +46,7 @@ export function Sidebar() {
                         <div>
                             <p className="px-4 text-xs font-semibold tracking-widest text-gray-400 uppercase">Imóveis</p>
                             <nav className="flex-1 mt-4 space-y-1">
-                                <Link to="#" title="" className="flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group   ">
+                                <Link to="/complete-registration" title="" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/complete-registration' ? 'bg-indigo-600' : ''}`}>
                                 <UserPlus width={20} height={20} className='mr-4'/>
                                     Cadastro completo
                                 </Link>
@@ -55,7 +55,7 @@ export function Sidebar() {
                                 <CopyPlus width={20} height={20} className='mr-4'/>
                                     Cadastro rápido
                                 </Link>
-                                <Link to="#" title="" className="flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group   ">
+                                <Link to="/pending-properties" title="" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/pending-properties' ? 'bg-indigo-600' : ''}`}>
                                 <Building2 width={20} height={20} className='mr-4'/>
                                     Imóveis pendentes <span className="text-xs uppercase ml-auto font-semibold text-white bg-gray-500 border border-transparent rounded-full inline-flex items-center px-2 py-0.5"> 5 </span>
                                 </Link>
@@ -63,12 +63,12 @@ export function Sidebar() {
                         </div>
 
                         <nav className="flex-1 space-y-1">
-                            <a href="#" title="home" className="flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/contracts" title="home" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/contracts' ? 'bg-indigo-600' : ''}`}>
                             <FileCode width={20} height={20} className='mr-4'/>
                                 Contratos
                             </a>
 
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/team" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/team' ? 'bg-indigo-600' : ''}`}>
                             <Users width={20} height={20} className='mr-4'/>
                                 Equipes
                             </a>
