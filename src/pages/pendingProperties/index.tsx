@@ -164,7 +164,7 @@ export function PendingProperties() {
                                        <input type="checkbox" name="" id="" />
                                     </td>
                                     <td className="px-6 py-4 text-sm   whitespace-nowrap">
-                                        <div className="bg-green-600 border border-gray-200 text-slate-300 rounded-lg px-3 py-2">
+                                        <div className="bg-green-600 border border-gray-200 text-white rounded-lg px-3 py-2">
                                             30
                                         </div>
                                     </td>
@@ -225,7 +225,7 @@ export function PendingProperties() {
                                        <input type="checkbox" name="" id="" />
                                     </td>
                                     <td className="px-6 py-4 text-sm   whitespace-nowrap">
-                                        <div className="bg-green-600 border border-gray-200 text-slate-300 rounded-lg px-3 py-2">
+                                        <div className="bg-green-600 border border-gray-200 text-white rounded-lg px-3 py-2">
                                             30
                                         </div>
                                     </td>
@@ -286,7 +286,7 @@ export function PendingProperties() {
                                        <input type="checkbox" name="" id="" />
                                     </td>
                                     <td className="px-6 py-4 text-sm   whitespace-nowrap">
-                                        <div className="bg-green-600 border border-gray-200 text-slate-300 rounded-lg px-3 py-2">
+                                        <div className="bg-green-600 border border-gray-200 text-white rounded-lg px-3 py-2">
                                             30
                                         </div>
                                     </td>

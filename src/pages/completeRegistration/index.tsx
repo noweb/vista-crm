@@ -11,7 +11,7 @@ export function CompleteRegistation() {
             <div className="flex-1">
                 <div className="container mx-auto py-5">
                     <div className="">
-                        <h1 className="text-2xl font-bold text-gray-900">Você está cadastrando Cliente</h1>
+                        <h1 className="text-2xl font-bold text-gray-900">Dados do imóvel</h1>
                     </div>
 
                     <div className="container mx-auto py-8">
