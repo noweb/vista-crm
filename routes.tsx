@@ -10,6 +10,7 @@ import { CompleteRegistation } from "./src/pages/completeRegistration";
 import { Contracts } from "./src/pages/contracts";
 import { Team } from "./src/pages/team";
 import { PendingProperties } from "./src/pages/pendingProperties";
+import { StickyNotes } from "./src/pages/stickyNotes";
 export function Router(){
     return (
         
@@ -25,7 +26,7 @@ export function Router(){
           <Route path="/pending-properties" element={<PendingProperties/>} /> 
           <Route path="/contracts" element={<Contracts/>} /> 
           <Route path="/team" element={<Team/>} /> 
-
+          <Route path="/sticky-notes" element={<StickyNotes/>} /> 
         </Routes>
 
     )

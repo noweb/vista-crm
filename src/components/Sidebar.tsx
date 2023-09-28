@@ -72,7 +72,7 @@ export function Sidebar() {
                             <Users width={20} height={20} className='mr-4'/>
                                 Equipes
                             </a>
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/sticky-notes" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/sticky-notes' ? 'bg-indigo-600' : ''}`}>
                               <Bell width={20} height={20} className='mr-4'/>
                                 Lembretes
                             </a>

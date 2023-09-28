@@ -16,16 +16,16 @@ export function CreateClient() {
                 <div className="container mx-auto py-8">
                     <div className="border-b border-gray-200">
                         <nav className="flex -mb-px space-x-10">
-                            <a href="#"
+                            <button 
                                 onClick={() => setBart('cliente')}
                                 className={`py-4 text-sm font-medium  transition-all duration-200 border-b-2  whitespace-nowrap ${bar === 'cliente' ? 'text-indigo-600  border-indigo-600' : 'text-gray-500 border-transparent hover:border-gray-300'} `}>
                                 Cliente
-                            </a>
+                            </button>
 
-                            <a href="#"
+                            <button 
                                 onClick={() => setBart('dados')}
                                 className={`py-4 text-sm font-medium  transition-all duration-200 border-b-2  whitespace-nowrap ${bar === 'dados' ? 'text-indigo-600  border-indigo-600' : 'text-gray-500 border-transparent hover:border-gray-300'} `}>
-                               Dados Complementares </a>
+                               Dados Complementares </button>
                         </nav>
                     </div>
                 </div>

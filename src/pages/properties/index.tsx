@@ -1,241 +1,324 @@
+import { BookmarkCheck, ChevronDown, DownloadCloud, MapPin, MenuIcon, MoreHorizontal, Printer, SettingsIcon, Share2, Star, Volume2 } from "lucide-react";
 import { Sidebar } from "../../components/Sidebar";
+import { Menu, Transition } from '@headlessui/react'
+import { Fragment } from 'react'
 
-export function Properties(){
+function classNames(...classes: any) {
+    return classes.filter(Boolean).join(' ')
+}
+
+export function Properties() {
     return (
         <div className="flex">
-            <Sidebar/>
+            <Sidebar />
             <div className="flex-1">
-                <div className="py-12 bg-white sm:py-16 lg:py-20">
-                    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="sm:flex sm:items-center sm:justify-between">
-                            <div>
-                                <p className="text-xl font-bold text-gray-900">Gerenciar Imóveis</p>
-                                <p className="mt-1 text-sm font-medium text-gray-500">Lorem ipsum dolor sit amet, consectetur adipis.</p>
-                            </div>
-
-                            <div className="flex items-center justify-start mt-4 sm:justify-end sm:mt-0 sm:space-x-7">
-                                <a href="#" type="button" className="items-center hidden px-3 py-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm sm:inline-flex hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                                    <svg className="w-4 h-4 mr-1 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                    </svg>
-                                    Exportar para CSV
-                                </a>
-
-                                <div className="inline-flex items-center justify-end">
-                                    <label  className="text-base font-medium text-gray-900 sm:text-sm"> Sort: </label>
-                                    <select id="sort" name="sort" className="block w-full py-2 pl-1 pr-10 text-base border-gray-300 border-none rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
-                                        <option>Popularidade</option>
-                                    </select>
+                <div className="mx-auto max-w-7xl py-10">
+                    <h1 className="text-2xl font-bold text-gray-900">Imóveis</h1>
+                    <div className="flex items-center justify-between mt-5">
+                        <div className="flex items-center gap-2">
+                            <Menu as="div" className="relative inline-block text-left">
+                                <div>
+                                    <Menu.Button className="flex w-full justify-center gap-x-4 rounded-md bg-white pl-3  text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 ">
+                                        <div className="flex items-center gap-1 py-2">
+                                            <Star width={20} height={20} /> <span>(1)</span>
+                                        </div>
+                                        <div className="border border-l-slate-400 min-h-[36px] flex justify-center items-center hover:bg-gray-50">
+                                            <ChevronDown />
+                                        </div>
+                                    </Menu.Button>
                                 </div>
-                            </div>
+
+                                <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-100"
+                                    enterFrom="transform opacity-0 scale-95"
+                                    enterTo="transform opacity-100 scale-100"
+                                    leave="transition ease-in duration-75"
+                                    leaveFrom="transform opacity-100 scale-100"
+                                    leaveTo="transform opacity-0 scale-95"
+                                >
+                                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <div className="py-1">
+                                            <Menu.Item>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="#"
+                                                        className={classNames(
+                                                            active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                            'block px-4 py-2 text-sm'
+                                                        )}
+                                                    >
+                                                        Account settings
+                                                    </a>
+                                                )}
+                                            </Menu.Item>
+                                            <Menu.Item>
+                                                {({ active }) => (
+                                                    <a
+                                                        href="#"
+                                                        className={classNames(
+                                                            active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                            'block px-4 py-2 text-sm'
+                                                        )}
+                                                    >
+                                                        Support
+                                                    </a>
+                                                )}
+                                            </Menu.Item>
+
+
+                                        </div>
+                                    </Menu.Items>
+                                </Transition>
+                            </Menu>
+                            <button type="button" title="Imprimir" className="border cursor-pointer border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <Printer width={20} height={20} />
+                            </button>
+                            <button title="Adicionar ao bookmark de cliente" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <BookmarkCheck width={20} height={20} />
+                            </button>
+                            <button title="Baixar selecionados" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <DownloadCloud width={20} height={20} />
+                            </button>
+                            <button title="Gerenciar imóveis em massa nos portais e no site" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <Volume2 width={20} height={20} />
+                            </button>
+                            <button title="Compartilhamento redes sociais" type="button" className="border border-gray-200 text-white rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center bg-[#2d3644]">
+                                <Share2 width={20} height={20} />
+                            </button>
+
+
+
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <button title="Exibição padrão" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <MoreHorizontal width={20} height={20} />
+                            </button>
+                            <button title="Exibição compacta" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <MenuIcon width={20} height={20} />
+                            </button>
+                            <button title="Exibição em mapa" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <MapPin width={20} height={20} />
+                            </button>
+                            <button title="Configurações" className="border border-gray-200 rounded-lg px-3 py-2 min-w-[55px] flex justify-center items-center">
+                                <SettingsIcon width={20} height={20} />
+                            </button>
                         </div>
 
-                        <div className="flex flex-col mt-4 lg:mt-8">
-                            <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                                    <table className="min-w-full lg:divide-gray-200 lg:divide-y">
-                                        <thead className="hidden lg:table-header-group">
-                                            <tr>
+                    </div>
+                    <div className="mt-6 ring-1 ring-gray-300 rounded-2xl overflow-auto">
+                        <table className="min-w-full lg:divide-y lg:divide-gray-200">
+                            <thead className="hidden lg:table-header-group">
+                                <tr>
 
-                                                <th className="py-3.5 px-4 text-left text-xs uppercase tracking-widest font-medium text-gray-500">Endereço de email</th>
+                                    <td width="50%" className="group-hover:bg-gray-500 px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Codigo</td>
 
-                                                <th className="py-3.5 px-4 text-left text-xs uppercase tracking-widest font-medium text-gray-500">Número de tel.</th>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Categoria</td>
 
-                                                <th className="py-3.5 px-4 text-left hidden xl:table-cell text-xs uppercase tracking-widest font-medium text-gray-500">Data cadastro</th>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Endereco</td>
 
-                                                <th className="py-3.5 px-4 text-left text-xs uppercase tracking-widest font-medium text-gray-500">Status</th>
-                                                <th className="py-3.5 px-4 text-left text-xs uppercase tracking-widest font-medium text-gray-500">
-                                                     Actions 
-                                                </th>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Endereco Numero</td>
 
-                                               
-                                            </tr>
-                                        </thead>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Endereco</td>
 
-                                        <tbody>
-                                            <tr className="bg-white">
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        tim.jennings@example.com 
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">Dormitorio</td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                                        </svg>
-                                                        (480) 555-0103
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Valor venda</td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 xl:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        9 de Novembro de 2023
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Valor Aluguel</td>
 
-                                                <td className="px-4 py-4 text-sm font-medium text-right text-gray-900 align-top lg:align-middle lg:text-left whitespace-nowrap">Ativo</td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Bairro</td>
 
-                                                <td className="hidden px-4 py-4 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center space-x-4">
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none hover:text-white hover:border-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                                            Editar
-                                                        </a>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Empreendimento</td>
 
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white transition-all duration-200 bg-red-600 border border-gray-300 rounded-md shadow-sm hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                                                            <svg className="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                                            </svg>
-                                                            Excluir
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr className="bg-white">
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        tim.jennings@example.com 
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Salas</td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                                        </svg>
-                                                        (480) 555-0103
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Ano de construcao</td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 xl:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        9 de Novembro de 2023
-                                                    </div>
-                                                </td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Area Total</td>
 
-                                                <td className="px-4 py-4 text-sm font-medium text-right text-gray-900 align-top lg:align-middle lg:text-left whitespace-nowrap">Ativo</td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">Area Privativa</td>
+                                    <td className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-nowrap">CEP</td>
 
-                                                <td className="hidden px-4 py-4 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center space-x-4">
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none hover:text-white hover:border-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                                            Editar
-                                                        </a>
 
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white transition-all duration-200 bg-red-600 border border-gray-300 rounded-md shadow-sm hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                                                            <svg className="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                                            </svg>
-                                                            Excluir
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr className="bg-white">
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        tim.jennings@example.com 
-                                                    </div>
-                                                </td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                                        </svg>
-                                                        (480) 555-0103
-                                                    </div>
-                                                </td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 xl:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        9 de Novembro de 2023
-                                                    </div>
-                                                </td>
 
-                                                <td className="px-4 py-4 text-sm font-medium text-right text-gray-900 align-top lg:align-middle lg:text-left whitespace-nowrap">Ativo</td>
+                                </tr>
+                            </thead>
 
-                                                <td className="hidden px-4 py-4 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center space-x-4">
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none hover:text-white hover:border-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                                            Editar
-                                                        </a>
+                            <tbody className="divide-y divide-gray-200">
+                                <tr className="hover:bg-gray-100 duration-300 cursor-pointer" id="product-512">
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        5202
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Sobrado
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Paqueta
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        12
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        512
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        4
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 900.000,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 0,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Alto da moca
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        ..
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        03170-020
+                                    </td>
+                                </tr>
+                                <tr className="hover:bg-gray-100 duration-300 cursor-pointer" id="product-512">
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        5202
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Sobrado
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Paqueta
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        12
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        512
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        4
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 900.000,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 0,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Alto da moca
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        ..
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        03170-020
+                                    </td>
+                                </tr>
+                                <tr className="hover:bg-gray-100 duration-300 cursor-pointer" id="product-512">
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        5202
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Sobrado
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Paqueta
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        12
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        512
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        4
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 900.000,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        R$ 0,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        Alto da moca
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        ..
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        0
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        203,00
+                                    </td>
+                                    <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
+                                        03170-020
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white transition-all duration-200 bg-red-600 border border-gray-300 rounded-md shadow-sm hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                                                            <svg className="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                                            </svg>
-                                                            Excluir
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr className="bg-white">
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        tim.jennings@example.com 
-                                                    </div>
-                                                </td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                                        </svg>
-                                                        (480) 555-0103
-                                                    </div>
-                                                </td>
 
-                                                <td className="hidden px-4 py-4 text-sm font-medium text-gray-900 xl:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                        <svg className="w-4 h-4 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                        </svg>
-                                                        9 de Novembro de 2023
-                                                    </div>
-                                                </td>
+                    </div>
+                    <div className="py-6 bg-gray-50 w-full rounded-b-2xl">
+                        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                            <div className="flex flex-col items-center lg:flex-row lg:justify-between">
+                                <p className="text-sm font-medium text-gray-500">Mostrando do 1 ao 20 de 483 resultados</p>
 
-                                                <td className="px-4 py-4 text-sm font-medium text-right text-gray-900 align-top lg:align-middle lg:text-left whitespace-nowrap">Ativo</td>
+                                <nav className="relative mt-6 lg:mt-0 flex justify-end space-x-1.5">
+                                    <a href="#" title="" className="inline-flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-400 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 w-9">
+                                        <span className="sr-only"> Previous </span>
+                                        <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                        </svg>
+                                    </a>
 
-                                                <td className="hidden px-4 py-4 lg:table-cell whitespace-nowrap">
-                                                    <div className="flex items-center space-x-4">
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none hover:text-white hover:border-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                                            Editar
-                                                        </a>
+                                    <a href="#" title="" aria-current="page" className="inline-flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-900 bg-gray-100 border border-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 w-9"> 1 </a>
 
-                                                        <a href="#" type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white transition-all duration-200 bg-red-600 border border-gray-300 rounded-md shadow-sm hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                                                            <svg className="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                                            </svg>
-                                                            Excluir
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    <a href="#" title="" className="inline-flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-400 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 w-9"> 2 </a>
+
+                                    <a href="#" title="" className="inline-flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-400 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 w-9">
+                                        <span className="sr-only"> Next </span>
+                                        <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </nav>
                             </div>
                         </div>
                     </div>
