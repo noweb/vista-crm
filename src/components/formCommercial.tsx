@@ -239,7 +239,7 @@ export function FormCommercial() {
                     <div className="col-span-1">
                         <label htmlFor="" className="block text-sm font-medium text-gray-600"> Lado Esquerdo </label>
                         <input type="text" name="" id="" placeholder="Lado Esquerdo" className="mt-2 border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-indigo-600 focus-visible:border-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" required />
-                    </div>
+                    </div>  
                     <div className="col-span-2">
                         <label htmlFor="" className="block text-sm font-medium text-gray-600"> Lado Direito </label>
                         <input type="text" name="" id="" placeholder="Lado Direito" className="mt-2 border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-indigo-600 focus-visible:border-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" required />
