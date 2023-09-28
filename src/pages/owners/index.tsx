@@ -1,4 +1,4 @@
-import { ArrowBigRightDash, DownloadCloud, PlusCircle, Printer, Star } from "lucide-react";
+import { DownloadCloud, PlusCircle, Printer } from "lucide-react";
 import { Sidebar } from "../../components/Sidebar";
 import { useState } from "react";
 
