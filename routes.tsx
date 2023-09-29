@@ -6,7 +6,7 @@ import { Clients } from "./src/pages/clients";
 import { Properties } from "./src/pages/properties";
 import { Owners } from "./src/pages/owners";
 import { CompleteRegistation } from "./src/pages/completeRegistration";
-import { Contracts } from "./src/pages/contracts";
+// import { Contracts } from "./src/pages/contracts";
 import { Team } from "./src/pages/team";
 import { PendingProperties } from "./src/pages/pendingProperties";
 import { StickyNotes } from "./src/pages/stickyNotes";
