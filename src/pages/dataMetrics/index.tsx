@@ -35,7 +35,7 @@ export function DataMetrics() {
         <div className="flex">
             <Sidebar />
             <div className="flex-1">
-                <div className="mx-auto max-w-7xl py-10">
+                <div className="mx-auto max-w-7xl px-6 py-10">
                     <div className="flex justify-between items-center ">
                         <h1 className="text-2xl font-bold text-gray-900">Métricas e dados</h1>
 

@@ -67,7 +67,7 @@ export function Home() {
         <div className="flex">
             <Sidebar />
 
-            <div className="container mx-auto py-8">
+            <div className="container mx-auto px-6 py-8">
 
                 <div className="md:items-center md:flex">
                     <p className="text-base font-bold text-gray-900">Olá Mariana -</p>

@@ -12,7 +12,7 @@ export function Properties() {
         <div className="flex">
             <Sidebar />
             <div className="flex-1">
-                <div className="mx-auto max-w-7xl py-10">
+                <div className="mx-auto max-w-7xl px-6 py-10">
                     <h1 className="text-2xl font-bold text-gray-900">Imóveis</h1>
                     <div className="flex items-center justify-between mt-5">
                         <div className="flex items-center gap-2">

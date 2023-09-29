@@ -9,7 +9,7 @@ export function CreateClient() {
         <div className="flex">
             <Sidebar />
 
-            <div className="container mx-auto py-5">
+            <div className="container mx-auto px-6 py-5">
                 <div className="mx-auto">
                     <h1 className="text-2xl font-bold text-gray-900">Você está cadastrando Cliente</h1>
                 </div>

@@ -9,7 +9,7 @@ export function Plantation() {
         <div className="flex ">
             <Sidebar />
             <div className="flex-1 relative">
-                <div className="mx-auto max-w-7xl py-10">
+                <div className="mx-auto max-w-7xl px-6 py-10">
                     <h1 className="text-2xl font-bold text-gray-900">Plantões</h1>
 
                     <div className="mt-4 bg-slate-500 w-full flex justify-between items-center rounded-lg text-white py-5 px-4">

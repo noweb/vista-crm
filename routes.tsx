@@ -14,7 +14,6 @@ import { DataMetrics } from "./src/pages/dataMetrics";
 import { Plantation } from "./src/pages/plantation";
 export function Router(){
     return (
-        
         <Routes>
           <Route path="/" element={<Login/>} />   
           <Route path="/dashboard" element={<Home/>} />    
@@ -24,7 +23,7 @@ export function Router(){
           <Route path="/owners" element={<Owners/>} /> 
           <Route path="/complete-registration" element={<CompleteRegistation/>} /> 
           <Route path="/pending-properties" element={<PendingProperties/>} /> 
-          <Route path="/contracts" element={<Contracts/>} /> 
+          <Route path="/contracts" element={<PendingProperties/>} /> 
           <Route path="/team" element={<Team/>} /> 
           <Route path="/sticky-notes" element={<StickyNotes/>} /> 
           <Route path="/data-metrics" element={<DataMetrics/>} /> 

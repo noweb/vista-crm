@@ -6,7 +6,7 @@ export function StickyNotes() {
         <div className="flex">
             <Sidebar />
             <div className="flex-1">
-                <div className="mx-auto max-w-7xl py-10">
+                <div className="mx-auto max-w-7xl px-6 py-10">
                     <div className="flex flex-col gap-10">
                         <h1 className="text-2xl font-bold text-gray-900">Lembretes</h1>
                         <p className="text-lg text-gray-700">Atualize de forma rápida e prática as informações com a nova

@@ -14,7 +14,7 @@ export function Contracts() {
         <div className="flex">
             <Sidebar />
             <div className="flex-1 relative">
-                <div className="mx-auto max-w-7xl py-10">
+                <div className="mx-auto max-w-7xl px-6 py-10">
                     <div className="flex items-center justify-between">
                         <h1 className="text-2xl font-bold text-gray-900">Contratos</h1>
 
