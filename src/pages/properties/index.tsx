@@ -1,4 +1,4 @@
-import { MoreHorizontal, Share2, File } from "lucide-react";
+import { MoreHorizontal, Share2, File, History, AppWindow, BedSingle } from "lucide-react";
 import { Sidebar } from "../../components/Sidebar";
 
 
@@ -12,7 +12,7 @@ export function Properties() {
                     <div className="max-w-sm w-full lg:max-w-full lg:flex mt-5">
                         <div className="bg-card-1 h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                         </div>
-                        <div className="border-r w-full border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div className="border-r w-full border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 pb-0 flex flex-col justify-between leading-normal">
                             <div className="mb-8">
 
                                 <div className="flex justify-between items-center">
@@ -42,6 +42,55 @@ export function Properties() {
                                     <h4 className="text-slate-900 ">Iptu</h4>
                                     <span className="text-slate-700 text-sm">R$ 69.000,00</span>
                                 </div>
+                            </div>
+                            <div className="flex border border-gray-200 gap-10 p-3 mt-4">
+                                <div className="flex items-center gap-2">
+                                    <button className="bg-green-600 text-white p-2 flex gap-2 items-center rounded-lg text-sm">
+                                        <History width={15} height={15}/>
+                                        30
+                                    </button>
+                                    <button className="border border-gray-200 p-3 rounded-lg">
+                                    <AppWindow width={15} height={15}/>
+                                    </button>
+
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Dormitórios</span>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Suítes</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Vagas</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">1750 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Privativos</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">2000 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Totais</span>
+                                    </div>
+                                </div>
+                                <div></div>
                             </div>
                         </div>
                     </div>
@@ -80,7 +129,57 @@ export function Properties() {
                                     <span className="text-slate-700 text-sm">R$ 69.000,00</span>
                                 </div>
                             </div>
+                            <div className="flex border border-gray-200 gap-10 p-3 mt-4">
+                                <div className="flex items-center gap-2">
+                                    <button className="bg-green-600 text-white p-2 flex gap-2 items-center rounded-lg text-sm">
+                                        <History width={15} height={15}/>
+                                        30
+                                    </button>
+                                    <button className="border border-gray-200 p-3 rounded-lg">
+                                    <AppWindow width={15} height={15}/>
+                                    </button>
+
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Dormitórios</span>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Suítes</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Vagas</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">1750 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Privativos</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">2000 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Totais</span>
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
                         </div>
+                        
                     </div>
 
                     <div className="max-w-sm w-full lg:max-w-full lg:flex mt-5">
@@ -90,8 +189,8 @@ export function Properties() {
                             <div className="mb-8">
 
                                 <div className="flex justify-between items-center">
-                                    <h3 className="text-gray-900 font-bold text-xl mb-2"> 
-Alphaville</h3>
+                                    <h3 className="text-gray-900 font-bold text-xl mb-2">
+                                        Alphaville</h3>
                                     <div className="flex items-center gap-3">
                                         <button>
                                             <Share2 width={18} height={18} />
@@ -117,6 +216,55 @@ Alphaville</h3>
                                     <h4 className="text-slate-900 ">Iptu</h4>
                                     <span className="text-slate-700 text-sm">R$ 69.000,00</span>
                                 </div>
+                            </div>
+                            <div className="flex border border-gray-200 gap-10 p-3 mt-4">
+                                <div className="flex items-center gap-2">
+                                    <button className="bg-green-600 text-white p-2 flex gap-2 items-center rounded-lg text-sm">
+                                        <History width={15} height={15}/>
+                                        30
+                                    </button>
+                                    <button className="border border-gray-200 p-3 rounded-lg">
+                                    <AppWindow width={15} height={15}/>
+                                    </button>
+
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Dormitórios</span>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Suítes</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Vagas</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">1750 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Privativos</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">2000 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Totais</span>
+                                    </div>
+                                </div>
+                                <div></div>
                             </div>
                         </div>
                     </div>
@@ -154,6 +302,55 @@ Alphaville</h3>
                                     <h4 className="text-slate-900 ">Iptu</h4>
                                     <span className="text-slate-700 text-sm">R$ 69.000,00</span>
                                 </div>
+                            </div>
+                            <div className="flex border border-gray-200 gap-10 p-3 mt-4">
+                                <div className="flex items-center gap-2">
+                                    <button className="bg-green-600 text-white p-2 flex gap-2 items-center rounded-lg text-sm">
+                                        <History width={15} height={15}/>
+                                        30
+                                    </button>
+                                    <button className="border border-gray-200 p-3 rounded-lg">
+                                    <AppWindow width={15} height={15}/>
+                                    </button>
+
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Dormitórios</span>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Suítes</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-slate-600">6</span>
+                                            <span><BedSingle width={15} height={15} /></span>
+                                        </div>
+                                        <span className="text-sm text-slate-900">Vagas</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">1750 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Privativos</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-sm text-slate-900">2000 m²</span>
+                                        </div>
+                                        <span className="text-xs text-slate-600">Totais</span>
+                                    </div>
+                                </div>
+                                <div></div>
                             </div>
                         </div>
                     </div>

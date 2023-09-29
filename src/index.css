@@ -11,20 +11,24 @@
 .bg-card-1{
   background-image: url('https://cdn.vistahost.com.br/novostil/vista.imobi/fotos/5936/i356UC43292V11vOWH339_59365b48e1336c1f9_p.jpg');
   width: 400px !important;
+  border: 1px solid #9da3af;
 }
 
 
 .bg-card-2{
   background-image: url('https://cdn.vistahost.com.br/novostil/vista.imobi/fotos/7323/i35TAg_73235cf6ac2ba8d82_p.jpg');
   width: 400px !important;
+  border: 1px solid #9da3af;
 }
 
 .bg-card-3{
   background-image: url('https://cdn.vistahost.com.br/novostil/vista.imobi/fotos/16089/i69EZ1XKz1Znqly_1608964e7aecaab58c_p.jpg');
   width: 400px !important;
+  border: 1px solid #9da3af;
 }
 
 .bg-card-4{
   background-image: url('https://cdn.vistahost.com.br/novostil/vista.imobi/fotos/13664/ioBzB5Yb_1366462545f110314a_p.jpg');
   width: 400px !important;
+  border: 1px solid #9da3af;
 }
