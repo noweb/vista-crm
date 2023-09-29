@@ -12,9 +12,11 @@ import { PendingProperties } from "./src/pages/pendingProperties";
 import { StickyNotes } from "./src/pages/stickyNotes";
 import { DataMetrics } from "./src/pages/dataMetrics";
 import { Plantation } from "./src/pages/plantation";
+import { PageError } from "./src/pages/pageError";
 export function Router(){
     return (
         <Routes>
+            <Route path="*" element={<PageError/>} />   
           <Route path="/" element={<Login/>} />   
           <Route path="/dashboard" element={<Home/>} />    
           <Route path="/create-client" element={<CreateClient/>} />   
