@@ -6,7 +6,7 @@ import { Clients } from "./src/pages/clients";
 import { Properties } from "./src/pages/properties";
 import { Owners } from "./src/pages/owners";
 import { CompleteRegistation } from "./src/pages/completeRegistration";
-// import { Contracts } from "./src/pages/contracts";
+import { Contracts } from "./src/pages/contracts";
 import { Team } from "./src/pages/team";
 import { PendingProperties } from "./src/pages/pendingProperties";
 import { StickyNotes } from "./src/pages/stickyNotes";
@@ -23,7 +23,7 @@ export function Router(){
           <Route path="/owners" element={<Owners/>} /> 
           <Route path="/complete-registration" element={<CompleteRegistation/>} /> 
           <Route path="/pending-properties" element={<PendingProperties/>} /> 
-          <Route path="/contracts" element={<PendingProperties/>} /> 
+          <Route path="/contracts" element={<Contracts/>} /> 
           <Route path="/team" element={<Team/>} /> 
           <Route path="/sticky-notes" element={<StickyNotes/>} /> 
           <Route path="/data-metrics" element={<DataMetrics/>} /> 
