@@ -13,10 +13,15 @@ import { StickyNotes } from "./src/pages/stickyNotes";
 import { DataMetrics } from "./src/pages/dataMetrics";
 import { Plantation } from "./src/pages/plantation";
 import { PageError } from "./src/pages/pageError";
+import { ClientDetails } from "./src/pages/clientDetails";
+import { PublishingProperties } from "./src/pages/publishingProperties";
+import { Users } from "./src/pages/users";
+import { UserDetails } from "./src/pages/userDetails";
+import { Marketplace } from "./src/pages/marketplace";
 export function Router(){
     return (
         <Routes>
-            <Route path="*" element={<PageError/>} />   
+        <Route path="*" element={<PageError/>} />   
           <Route path="/" element={<Login/>} />   
           <Route path="/dashboard" element={<Home/>} />    
           <Route path="/create-client" element={<CreateClient/>} />   
@@ -28,8 +33,13 @@ export function Router(){
           <Route path="/contracts" element={<Contracts/>} /> 
           <Route path="/team" element={<Team/>} /> 
           <Route path="/sticky-notes" element={<StickyNotes/>} /> 
+          <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/data-metrics" element={<DataMetrics/>} /> 
           <Route path="/plantation" element={<Plantation/>} /> 
+          <Route path="/details-client" element={<ClientDetails/>} /> 
+          <Route path="/publishing-properties" element={<PublishingProperties/>} /> 
+          <Route path="/users" element={<Users/>} /> 
+          <Route path="/user-details" element={<UserDetails/>} /> 
         </Routes>
 
     )

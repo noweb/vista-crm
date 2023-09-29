@@ -31,7 +31,7 @@ export function Sidebar() {
                                 <Building width={20} height={20} className='mr-4' />
                                 Imóveis
                             </Link>
-                            <Link to="/clients" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/clients' ? 'bg-indigo-600' : ''}`}>
+                            <Link to="/clients" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/clients' || pathname === '/details-client' ? 'bg-indigo-600' : ''}`}>
                                 <Users width={20} height={20} className='mr-4' />
                                 Clientes
                             </Link>
@@ -68,31 +68,31 @@ export function Sidebar() {
                                 Contratos
                             </a>
 
-                            <a href="/team" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/team' ? 'bg-indigo-600' : ''}`}>
+                            <a href="/team"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/team' ? 'bg-indigo-600' : ''}`}>
                             <Users width={20} height={20} className='mr-4'/>
                                 Equipes
                             </a>
-                            <a href="/sticky-notes" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/sticky-notes' ? 'bg-indigo-600' : ''}`}>
+                            <a href="/sticky-notes"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/sticky-notes' ? 'bg-indigo-600' : ''}`}>
                               <Bell width={20} height={20} className='mr-4'/>
                                 Lembretes
                             </a>
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/marketplace"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/marketplace' ? 'bg-indigo-600' : ''}`}>
                             <ShoppingCart width={20} height={20} className='mr-4'/>
                                 Marketplace
                             </a>
-                            <a href="/data-metrics" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/data-metrics' ? 'bg-indigo-600' : ''}`}>
+                            <a href="/data-metrics"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/data-metrics' ? 'bg-indigo-600' : ''}`}>
                             <BarChart4 width={20} height={20} className='mr-4'/>
                                 Métricas de dados 
                             </a>
-                            <a href="/plantation" title="tasks" className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/plantation' ? 'bg-indigo-600' : ''}`}>
+                            <a href="/plantation"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/plantation' ? 'bg-indigo-600' : ''}`}>
                             <CalendarCheck2 width={20} height={20} className='mr-4'/>
                                 Plantões
                             </a>
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/publishing-properties"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/publishing-properties' ? 'bg-indigo-600' : ''}`}>
                             <Volume2 width={20} height={20} className='mr-4'/>
                                 Publicação de imóveis
                             </a>
-                            <a href="#" title="tasks" className="mt-4 text-white flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ">
+                            <a href="/users"  className={`flex text-white items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-lg group  ${pathname === '/users' || pathname === '/user-details' ? 'bg-indigo-600' : ''}`}>
                             <Users width={20} height={20} className='mr-4'/>
                                 Usúarios
                             </a>

@@ -1,8 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import { Sidebar } from "../../components/Sidebar";
 import { ArrowBigRightDash, DownloadCloud, Printer, SettingsIcon, Star, History } from "lucide-react";
 
 
 export function Clients() {
+
+    let navigate = useNavigate();
+
+
+   function link(){
+    navigate('/details-client')
+   }
+
     return (
         <div className="flex">
             <Sidebar />
@@ -57,7 +66,7 @@ export function Clients() {
                         <div className="mt-6 ring-1 ring-gray-300 rounded-2xl overflow-auto">
                             <table className="min-w-full lg:divide-y lg:divide-gray-200">
                                 <thead className="hidden lg:table-header-group">
-                                    <tr>
+                                    <tr >
                                         <td className="group-hover:bg-gray-500 px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal"></td>
 
                                         <td className="group-hover:bg-gray-500 px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal">
@@ -85,14 +94,14 @@ export function Clients() {
                                 </thead>
 
                                 <tbody className="divide-y divide-gray-200">
-                                    <tr className="hover:bg-gray-100 duration-300 cursor-pointer" id="product-512">
+                                    <tr onClick={link} className="hover:bg-gray-100 duration-300 cursor-pointer" id="product-512">
 
                                         <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
                                             <input type="checkbox" name="" id="" />
                                         </td>
 
                                         <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
-                                            <div className="bg-green-600 border border-gray-200 text-white rounded-lg px-3 py-2">30</div>
+                                                <div className="bg-green-600 border border-gray-200 text-white rounded-lg px-3 py-2">30</div>
                                         </td>
                                         <td className="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap">
                                             <Star width={20} height={20} className="hover:text-yellow-600 transition-all duration-500" />
